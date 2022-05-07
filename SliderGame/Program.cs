@@ -34,7 +34,7 @@ bool didYouWin = false;
 while (!didYouWin)
 {
     // print the current stage
-
+    game.Print();
 
     // Ask user for input
     Console.Write("Next move: ");
@@ -50,6 +50,7 @@ while (!didYouWin)
     // if no --> print the stage and congratulate the played for winning
 }
 // print the current stage
+game.Print();
 
 
 Console.WriteLine("Congratulations, you have solved the mystery of SliderGame!!!");
