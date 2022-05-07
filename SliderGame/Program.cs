@@ -41,7 +41,7 @@ while (!didYouWin)
     string userInput = Console.ReadLine();
 
     // execute stage.ExecuteTurn
-    game.ExecuteTurn(Int32.Parse(userInput));
+    game.ExecuteTurn(Int32.Parse(userInput) - 1);
 
     // figure out if you won:
     didYouWin = game.IsWinning();

@@ -43,7 +43,8 @@ public class Stage
 
     public void Print()
     {
-        Console.WriteLine("Implement the printing later");
+
+        this.listOfSliders.ForEach(slider => slider.PrintSelf());
     }
 
 }

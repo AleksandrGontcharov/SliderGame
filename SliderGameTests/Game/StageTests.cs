@@ -28,14 +28,14 @@ namespace SliderGame.Game.Tests
             var game = new Stage(listOfSliders);
 
             game.ExecuteTurn(0);
-            Assert.True(game.listOfSliders[0].currPosition == 3, "incorrect position");
-            Assert.True(game.listOfSliders[0].direction == false, "incorrect position");
-            Assert.True(game.listOfSliders[1].currPosition == 5, "incorrect position");
-            Assert.True(game.listOfSliders[1].direction == true, "incorrect position");
-            Assert.True(game.listOfSliders[2].currPosition == 1, "incorrect position");
-            Assert.True(game.listOfSliders[2].direction == false, "incorrect position");
-            Assert.True(game.listOfSliders[3].currPosition == 4, "incorrect position");
-            Assert.True(game.listOfSliders[3].direction == false, "incorrect position");
+            Assert.True(game.listOfSliders[0].currPosition == 3,  "1 incorrect position");
+            Assert.True(game.listOfSliders[0].direction == false, "2 incorrect position");
+            Assert.True(game.listOfSliders[1].currPosition == 5,  "3 incorrect position");
+            Assert.True(game.listOfSliders[1].direction == true,  "4 incorrect position");
+            Assert.True(game.listOfSliders[2].currPosition == 1,  "5 incorrect position");
+            Assert.True(game.listOfSliders[2].direction == true, "6 incorrect position");
+            Assert.True(game.listOfSliders[3].currPosition == 4,  "7 incorrect position");
+            Assert.True(game.listOfSliders[3].direction == false, "8 incorrect position");
 
 
 

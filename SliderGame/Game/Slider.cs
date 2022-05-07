@@ -24,9 +24,9 @@ public class Slider
             currPosition = height;
             direction = false;
         }
-        else if (currPosition <= 0)
+        else if (currPosition <= 1)
         {
-            currPosition = 0;
+            currPosition = 1;
             direction = true;
         }
 
@@ -44,7 +44,7 @@ public class Slider
             this.constructorHelper(this.height, currPosition, false);
 
         }
-        else if (currPosition == 0)
+        else if (currPosition == 1)
         {
             this.currPosition = currPosition + 1;
             this.constructorHelper(this.height, currPosition, true);
@@ -63,4 +63,44 @@ public class Slider
             }
         }
     }
+
+
+    public string PrintSelf()
+    {
+        string[] result = Enumerable.Repeat("-", this.height).ToArray();
+
+        string arrowRight = ">";
+        string arrowLeft = "<";
+
+
+
+        // edge cases
+        if (currPosition == this.height)
+        {
+            result[this.currPosition - 1] = arrowLeft;
+        }
+        else if (currPosition == 1)
+        {
+            result[this.currPosition - 1] = arrowRight;
+        }
+        else
+        { // in the middle of the slider
+            if (direction)
+            {
+                result[this.currPosition - 1] = arrowRight;
+            }
+            else
+            {
+                result[this.currPosition - 1] = arrowLeft;
+            }
+        }
+
+
+        string output = string.Join("", result);
+
+        Console.WriteLine(output);
+
+        return output;
+    }
+
 }
